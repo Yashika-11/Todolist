@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -135,6 +135,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(port, function() {
+app.listen(process.env.PORT, function() {
   console.log("Server started on port 3000");
 });
